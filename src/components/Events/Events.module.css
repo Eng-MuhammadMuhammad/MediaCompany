@@ -1,0 +1,119 @@
+/* Events.module.css */
+
+.events {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .container img {
+    max-width: 400px;
+  }
+  
+  .info {
+    flex: 1;
+    
+  }
+  
+
+
+.subscribe {
+    margin-top: 20px;
+    background-color: #f3f4f6; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limits width of subscribe section */
+    text-align: center;
+  }
+  
+  .subscribe form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between inputs */
+  }
+  
+  .subscribe input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+  }
+  
+  .subscribe input[type="email"]:focus {
+    border-color: #0073e6; /* Focus color */
+    outline: none;
+  }
+  
+  .subscribe input[type="submit"] {
+    padding: 12px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribe input[type="submit"]:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+  }
+  
+  
+  .time {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 15px;
+  }
+  
+  .unit {
+    text-align: center;
+  }
+  
+  .mainTitle {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    margin-top: 1em;
+    padding-right: 40px;
+    
+  }
+  
+  .description {
+    margin-top: 0.5em;
+    color: gray;
+    padding-right: 30px;
+  }
+  
+      /* Main title styling and animations */
+.mainTitle {
+    position: relative;
+    text-transform: uppercase;
+    border: 2px solid black;
+    width: fit-content;
+    margin: 0 auto 80px;
+    padding: 20px;
+    z-index: 1;
+    transition: var(--main-transition);
+  }
+  
+  .mainTitle:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.1s;
+    background-color: var(--main-color);
+  }

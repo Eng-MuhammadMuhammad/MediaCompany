@@ -1,0 +1,80 @@
+.testimonials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: var(--section-background);
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  
+  .mainTitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  
+  .box {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0px 6px #00000085;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .image {
+    position: absolute;
+    right: -20px;
+    top: -29px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+  }
+  
+  h3 {
+    margin: 0 0 15px;
+    color: var(--main-color);
+  }
+  
+  .title {
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .rate .filled {
+    color: #ffc107;
+  }
+  
+  p {
+    line-height: 1.5;
+    color: #888;
+    margin-bottom: 0;
+  }
+  
+  
+    /* Main title styling and animations */
+.mainTitle {
+    position: relative;
+    text-transform: uppercase;
+    border: 2px solid black;
+    width: fit-content;
+    margin: 0 auto 80px;
+    padding: 20px;
+    z-index: 1;
+    transition: var(--main-transition);
+  }
+  
+  .mainTitle:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.1s;
+    background-color: var(--main-color);
+  }
