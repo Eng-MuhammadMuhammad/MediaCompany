@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Landing.module.css';
 
+import landingphoto from '../../assets/imgs/landing-image.png'
+
 const Landing = () => {
   return (
     <div className={styles.landing}>
@@ -14,7 +16,7 @@ const Landing = () => {
         </div>
         <div className={styles.image}>
           {/* The img element will apply the "up-and-down" animation */}
-          <img src="/imgs/landing-image.png" alt="Landing" />
+          <img src={landingphoto} alt="Landing" />
         </div>
       </div>
       <a href="#articles" className={styles.goDown}>

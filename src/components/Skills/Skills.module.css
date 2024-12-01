@@ -1,73 +1,113 @@
-/* Skills.module.css */
-
 .ourSkills {
-    padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
-    position: relative;
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-  }
-  
-  @media (max-width: 992px) {
-    .container img {
-      display: none;
-    }
-  }
-  
-  .skills {
-    flex: 1;
-  }
-  
-  .skill h3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-  }
-  
-  .skill h3 span {
-    font-size: 14px;
-    border: 1px solid #ccc;
-    color: var(--main-color);
-    padding: 5px 3px;
-    border-radius: 4px;
-  }
-  
-  .theProgress {
-    position: relative;
-    height: 20px;
-    width: 100%;
-    background-color: #efefef;
-  }
-  
-  .theProgress span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: var(--main-color);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.skills {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.skill h3 span {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  color: var(--main-color);
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.theProgress {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: #efefef;
+}
+
+.theProgress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+/* Main title styling and animations */
+.mainTitle {
+  position: relative;
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 0 auto 80px;
+  padding: 20px;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+
+.mainTitle:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.1s;
+  background-color: var(--main-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .ourSkills {
+      padding-left: 20px;
+      padding-right: 20px;
   }
 
-  /* Main title styling and animations */
-  .mainTitle {
-    position: relative;
-    text-transform: uppercase;
-    border: 2px solid black;
-    width: fit-content;
-    margin: 0 auto 80px;
-    padding: 20px;
-    z-index: 1;
-    transition: var(--main-transition);
+  .container {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
   }
-  
-  .mainTitle:hover {
-    color: white;
-    border: 2px solid white;
-    transition-delay: 0.1s;
-    background-color: var(--main-color);
-  }  
+
+  .container img {
+      display: block;
+      width: 100%;
+      margin: 0 0 20px;
+  }
+
+  .skills {
+      flex: none;
+      width: 100%;
+  }
+
+  .skill h3 {
+      font-size: 16px;
+  }
+
+  .skill h3 span {
+      font-size: 12px;
+      padding: 4px 6px;
+  }
+
+  .theProgress {
+      height: 15px;
+  }
+}

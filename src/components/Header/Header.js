@@ -5,6 +5,9 @@ import styles from './Header.module.css';
 import '../general.module.css'
 
 
+import megamenuphoto from '../../assets/imgs/megamenu.png'
+
+
 const Header = () => {
   
   
@@ -45,7 +48,7 @@ const Header = () => {
             <a href="/">Other Links</a>
             <div className={styles.megaMenu}>
               <div className={styles.image}>
-              <img src="imgs/megamenu.png" alt="" />
+              <img src={megamenuphoto} alt="" />
               </div>
               <ul className={styles.links}>
                 <li><a href="#testimonials"><i className="far fa-comments fa-fw"></i> Testimonials</a></li>

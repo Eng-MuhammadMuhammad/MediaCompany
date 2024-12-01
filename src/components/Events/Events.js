@@ -1,14 +1,15 @@
-// Events.js
-
 import React from 'react';
 import styles from './Events.module.css';
+
+import event_photo from '../../assets/imgs/events.png'
+
 
 const Events = () => {
   return (
     <div className={styles.events} id="events">
       <h2 className={styles.mainTitle}>Upcoming Tech Conference 2024</h2>
       <div className={styles.container}>
-        <img src="imgs/events.png" alt="Tech Conference_Image" />
+        <img src={event_photo} alt="Tech Conference_Image" />
         <div className={styles.info}>
           <div className={styles.time}>
             <div className={styles.unit}>

@@ -1,15 +1,24 @@
 import React from 'react';
 import styles from './Team.module.css';
 
+import team_photo_1 from '../../assets/imgs/team-01.jpg'
+import team_photo_2 from '../../assets/imgs/team-02.jpg'
+import team_photo_3 from '../../assets/imgs/team-03.jpg'
+import team_photo_4 from '../../assets/imgs/team-04.jpg'
+import team_photo_5 from '../../assets/imgs/team-05.png'
+import team_photo_6 from '../../assets/imgs/team-06.png'
+import team_photo_7 from '../../assets/imgs/team-07.jpg'
+import team_photo_8 from '../../assets/imgs/team-08.jpg'
+
 const teamMembers = [
-  { id: 1, name: 'John Doe', description: 'Web Developer', imgSrc: '/imgs/team-01.jpg' },
-  { id: 2, name: 'Jane Smith', description: 'UI/UX Designer', imgSrc: '/imgs/team-02.jpg' },
-  { id: 3, name: 'Mike Johnson', description: 'Backend Engineer', imgSrc: '/imgs/team-03.jpg' },
-  { id: 4, name: 'Emily Brown', description: 'Project Manager', imgSrc: '/imgs/team-04.jpg' },
-  { id: 5, name: 'Chris Lee', description: 'Data Scientist', imgSrc: '/imgs/team-05.png' },
-  { id: 6, name: 'Sophia White', description: 'Frontend Developer', imgSrc: '/imgs/team-06.png' },
-  { id: 7, name: 'Liam Wilson', description: 'Marketing Specialist', imgSrc: '/imgs/team-07.jpg' },
-  { id: 8, name: 'Olivia Green', description: 'Content Writer', imgSrc: '/imgs/team-08.jpg' },
+  { id: 1, name: 'John Doe', description: 'Web Developer', imgSrc: team_photo_1 },
+  { id: 2, name: 'Jane Smith', description: 'UI/UX Designer', imgSrc: team_photo_2 },
+  { id: 3, name: 'Mike Johnson', description: 'Backend Engineer', imgSrc: team_photo_3 },
+  { id: 4, name: 'Emily Brown', description: 'Project Manager', imgSrc: team_photo_4 },
+  { id: 5, name: 'Chris Lee', description: 'Data Scientist', imgSrc: team_photo_5 },
+  { id: 6, name: 'Sophia White', description: 'Frontend Developer', imgSrc: team_photo_6 },
+  { id: 7, name: 'Liam Wilson', description: 'Marketing Specialist', imgSrc: team_photo_7 },
+  { id: 8, name: 'Olivia Green', description: 'Content Writer', imgSrc: team_photo_8 },
 ];
 
 const Team = () => {

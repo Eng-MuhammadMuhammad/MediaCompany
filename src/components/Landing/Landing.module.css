@@ -1,119 +1,123 @@
 /* Start Landing */
 .landing {
-    position: relative;
+  position: relative;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  z-index: -1;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Change to column for mobile-first layout */
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 72px);
+  padding: 0 20px; /* Reduced padding for smaller screens */
+}
+
+.text {
+  text-align: center; /* Centered text for mobile */
+  padding: 0 10px;
+  margin-bottom: 20px; /* Added space below text */
+}
+
+.text h1 {
+  font-size: 36px; /* Reduced font size for better mobile fit */
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 10px 0;
+  color: #666;
+  max-width: 600px; /* Max width for better text fit */
+}
+
+.image img {
+  width: 100%; /* Ensure image scales with width */
+  max-width: 400px; /* Limit the width to prevent overflowing */
+  animation: up-and-down 5s linear infinite;
+}
+
+.goDown {
+  color: var(--main-color);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+}
+
+.goDown:hover {
+  color: var(--main-color-alt);
+}
+
+.goDown i {
+  animation: bouncing 1.5s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes up-and-down {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .landing::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -40px;
-    width: 100%;
-    height: 100%;
-    background-color: #ececec;
-    z-index: -1;
-    transform: skewY(-6deg);
-    transform-origin: top left;
+  50% {
+    transform: translateY(-10px);
   }
-  
+}
+
+@keyframes bouncing {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
   .container {
-    min-height: calc(100vh - 72px);
-    display: flex;
-    align-items: center;
+    flex-direction: row; /* Switch to row layout for larger screens */
+    justify-content: space-between;
     padding-left: 150px;
     padding-right: 150px;
   }
-  
+
   .text {
-    flex: 1;
+    text-align: left;
   }
-  
-  @media (max-width: 991px) {
-    .text {
-      text-align: center;
-    }
-  }
-  
+
   .text h1 {
-    font-size: 40px;
-    margin: 0;
-    letter-spacing: -2px;
+    font-size: 40px; /* Increase font size for larger screens */
   }
-  
-  @media (max-width: 767px) {
-    .text h1 {
-      font-size: 28px;
-    }
-  }
-  
+
   .text p {
-    font-size: 23px;
-    line-height: 1.7;
-    margin: 5px 0 0;
-    color: #666;
-    max-width: 500px;
+    font-size: 23px; /* Increase font size for larger screens */
   }
-  
-  @media (max-width: 991px) {
-    .text p {
-      margin: 10px auto;
-    }
+
+  .image {
+    display: block;
   }
-  
-  @media (max-width: 767px) {
-    .text p {
-      font-size: 18px;
-    }
-  }
-  
+
   .image img {
-    position: relative;
-    width: 600px;
-    animation: up-and-down 5s linear infinite;
+    width: 600px; /* Restore image size for larger screens */
   }
-  
-  @media (max-width: 991px) {
-    .image {
-      display: none;
-    }
-  }
-  
-  .goDown {
-    color: var(--main-color);
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: var(--main-transition);
-  }
-  
-  .goDown:hover {
-    color: var(--main-color-alt);
-  }
-  
-  .goDown i {
-    animation: bouncing 1.5s infinite;
-  }
-  
-  /* Keyframe Animations */
-  @keyframes up-and-down {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  @keyframes bouncing {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-15px);
-    }
-    60% {
-      transform: translateY(-10px);
-    }
-  /* End Landing */
-  }  
+}
+
+/* End Landing */

@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MediaCompany/static/css/main.af4c643c.css",
+    "main.js": "/MediaCompany/static/js/main.47ad8c71.js",
+    "static/media/fa-solid-900.ttf": "/MediaCompany/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/MediaCompany/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/MediaCompany/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/MediaCompany/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/fa-regular-400.ttf": "/MediaCompany/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/MediaCompany/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/MediaCompany/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/MediaCompany/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "index.html": "/MediaCompany/index.html",
+    "main.af4c643c.css.map": "/MediaCompany/static/css/main.af4c643c.css.map",
+    "main.47ad8c71.js.map": "/MediaCompany/static/js/main.47ad8c71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af4c643c.css",
+    "static/js/main.47ad8c71.js"
+  ]
+}

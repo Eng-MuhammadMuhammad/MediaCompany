@@ -1,92 +1,149 @@
 /* Articles.module.css */
 
+/* Default styling (desktop and larger screens) */
 .articles {
-    padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
-    position: relative;
-    padding-left: 150px;
-    padding-right: 150px;
-  }
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  padding-left: 150px;
+  padding-right: 150px;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
 
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
-  }
-  
-  .box {
-    box-shadow: 0 2px 10px #000000a8;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform var(--main-transition), box-shadow var(--main-transition);
-  }
-  
-  .box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 2px 10px #000000ce;
-  }
-  
-  .box img {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .content {
-    padding: 20px;
-  }
-  
-  .content h2 {
-    margin: 0;
-  }
-  
-  .content p {
-    margin: 10px 0 0;
-    line-height: 1.7;
-    color: #9c7d7d;
-  }
-  
-  .info {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgb(181, 181, 181);
-  }
-  
-  .info a {
-    color: var(--main-color);
-    font-weight: bold;
-  }
-  
-  .info i {
-    color: var(--main-color);
-  }
-  
-  .box:hover .info i {
-    animation: moving-arrow 0.5s alternate infinite;
-  }
-  
-  
-  /* Main title styling and animations */
+.box {
+  box-shadow: 0 2px 10px #000000a8;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform var(--main-transition), box-shadow var(--main-transition);
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 10px #000000ce;
+}
+
+.box img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  margin: 0;
+}
+
+.content p {
+  margin: 10px 0 0;
+  line-height: 1.7;
+  color: #9c7d7d;
+}
+
+.info {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgb(181, 181, 181);
+}
+
+.info a {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.info i {
+  color: var(--main-color);
+}
+
+.box:hover .info i {
+  animation: moving-arrow 0.5s alternate infinite;
+}
+
+/* Main title styling */
 .mainTitle {
-    position: relative;
-    text-transform: uppercase;
-    border: 2px solid black;
-    width: fit-content;
-    margin: 0 auto 80px;
-    padding: 20px;
-    z-index: 1;
-    transition: var(--main-transition);
+  position: relative;
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 0 auto 80px;
+  padding: 20px;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+
+.mainTitle:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.1s;
+  background-color: var(--main-color);
+}
+
+/* Mobile Responsiveness: Screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .articles {
+      padding-left: 20px;
+      padding-right: 20px;
   }
-  
-  .mainTitle:hover {
-    color: white;
-    border: 2px solid white;
-    transition-delay: 0.1s;
-    background-color: var(--main-color);
+
+  .container {
+      grid-template-columns: 1fr 1fr; /* 2 columns layout */
+      gap: 20px;
   }
-  
-  
+
+  .box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .content {
+      padding: 10px;
+  }
+
+  .content h2 {
+      font-size: 1.2rem;
+  }
+
+  .content p {
+      font-size: 0.9rem;
+  }
+
+  .info {
+      padding: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+      border-top: none;
+  }
+
+  .info a {
+      font-size: 1rem;
+      margin-bottom: 10px;
+  }
+
+  .info i {
+      font-size: 1.2rem;
+  }
+}
+
+/* Mobile Responsiveness: Screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  .container {
+      grid-template-columns: 1fr; /* 1 column layout for small screens */
+  }
+
+  .box {
+      padding: 10px;
+  }
+
+  .mainTitle {
+      width: 100%;
+      padding: 10px;
+  }
+}

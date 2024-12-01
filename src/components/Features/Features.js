@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './Features.module.css';
 
+import feat_photo_1 from '../../assets/imgs/features-01.jpg'
+import feat_photo_2 from '../../assets/imgs/features-02.jpg'
+import feat_photo_3 from '../../assets/imgs/features-03.jpg'
+
 const Features = () => {
   return (
     <div className={styles.features} id="features">
@@ -10,7 +14,7 @@ const Features = () => {
         {/* Quality Box */}
         <div className={`${styles.box} ${styles.quality}`}>
           <div className={styles.imagHolder}>
-            <img src="/imgs/features-01.jpg" alt="Quality" />
+            <img src={feat_photo_1} alt="Quality" />
           </div>
           <h2>Quality Assurance</h2>
           <p>We prioritize top-notch quality in every project, ensuring that our services meet rigorous standards to deliver excellence you can trust.</p>
@@ -20,7 +24,7 @@ const Features = () => {
         {/* Time Box */}
         <div className={`${styles.box} ${styles.time}`}>
           <div className={styles.imagHolder}>
-            <img src="/imgs/features-02.jpg" alt="Time" />
+            <img src={feat_photo_2} alt="Time" />
           </div>
           <h2>Timely Delivery</h2>
           <p>Time is of the essence. Our team is committed to meeting deadlines and delivering results promptly without compromising quality.</p>
@@ -30,7 +34,7 @@ const Features = () => {
         {/* Passion Box */}
         <div className={`${styles.box} ${styles.passion}`}>
           <div className={styles.imagHolder}>
-            <img src="/imgs/features-03.jpg" alt="Passion" />
+            <img src={feat_photo_3} alt="Passion" />
           </div>
           <h2>Passion Driven</h2>
           <p>Our passion for innovation and creativity drives us to exceed expectations and achieve remarkable results for our clients.</p>

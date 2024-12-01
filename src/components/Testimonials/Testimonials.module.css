@@ -1,80 +1,149 @@
 .testimonials {
-    padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
-    position: relative;
-    background-color: var(--section-background);
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-  
-  .mainTitle {
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-  }
-  
-  .box {
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 0px 6px #00000085;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .image {
-    position: absolute;
-    right: -20px;
-    top: -29px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 10px solid var(--section-background);
-  }
-  
-  h3 {
-    margin: 0 0 15px;
-    color: var(--main-color);
-  }
-  
-  .title {
-    color: #777;
-    margin-bottom: 10px;
-    display: block;
-  }
-  
-  .rate .filled {
-    color: #ffc107;
-  }
-  
-  p {
-    line-height: 1.5;
-    color: #888;
-    margin-bottom: 0;
-  }
-  
-  
-    /* Main title styling and animations */
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
 .mainTitle {
-    position: relative;
-    text-transform: uppercase;
-    border: 2px solid black;
-    width: fit-content;
-    margin: 0 auto 80px;
-    padding: 20px;
-    z-index: 1;
-    transition: var(--main-transition);
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Container for testimonials with responsive grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout for responsiveness */
+  gap: 40px;
+  margin-top: 30px; /* Add margin top for better spacing */
+}
+
+/* Testimonial box styling */
+.box {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 0px 6px #00000085;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px); /* Hover effect to lift the box slightly */
+}
+
+/* Image positioning and sizing */
+.image {
+  position: absolute;
+  right: -20px;
+  top: -29px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--section-background);
+}
+
+/* Name and title styling */
+h3 {
+  margin: 0 0 15px;
+  color: var(--main-color);
+}
+
+.title {
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Star rating styling */
+.rate .filled {
+  color: #ffc107;
+}
+
+/* Feedback text styling */
+p {
+  line-height: 1.5;
+  color: #888;
+  margin-bottom: 0;
+}
+
+/* Main title styling and animations */
+.mainTitle {
+  position: relative;
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 0 auto 80px;
+  padding: 20px;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+
+.mainTitle:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.1s;
+  background-color: var(--main-color);
+}
+
+/* Mobile responsiveness with media queries */
+@media (max-width: 768px) {
+  .testimonials {
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  
-  .mainTitle:hover {
-    color: white;
-    border: 2px solid white;
-    transition-delay: 0.1s;
-    background-color: var(--main-color);
+
+  .mainTitle {
+    font-size: 1.5em; /* Smaller font size for smaller screens */
   }
+
+  .container {
+    grid-template-columns: 1fr; /* Single column layout on mobile */
+    gap: 20px; /* Reduce gap between items */
+  }
+
+  .box {
+    padding: 20px; /* Reduced padding for mobile screens */
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 80px; /* Smaller image on mobile */
+    height: 80px;
+    top: -20px; /* Adjust positioning */
+  }
+
+  .rate {
+    font-size: 1.2em; /* Adjust star size */
+  }
+
+  p {
+    font-size: 0.9em; /* Smaller text size on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.2em; /* Further reduce font size for very small screens */
+    padding: 15px;
+  }
+
+  .testimonials {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .box {
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .image {
+    width: 70px; /* Even smaller image */
+    height: 70px;
+    top: -10px; /* Adjust image position */
+  }
+}

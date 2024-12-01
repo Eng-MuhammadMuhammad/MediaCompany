@@ -1,7 +1,7 @@
-// Skills.js
-
 import React from 'react';
 import styles from './Skills.module.css';
+
+import skill_photo from '../../assets/imgs/skills.png'
 
 const Skills = () => {
   const skillsData = [
@@ -15,7 +15,7 @@ const Skills = () => {
     <div className={styles.ourSkills} id="our-skills">
       <h2 className={styles.mainTitle}>Our Skills</h2>
       <div className={styles.container}>
-        <img src="/imgs/skills.png" alt="Skills" />
+        <img src={skill_photo} alt="Skills" />
 
         <div className={styles.skills}>
           {skillsData.map((skill, index) => (

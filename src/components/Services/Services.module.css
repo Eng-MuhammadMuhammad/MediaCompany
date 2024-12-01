@@ -1,115 +1,165 @@
-/* Services.module.css */
-
 .services {
-    padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
-    position: relative;
-    background-color: var(--section-background);
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-  }
-  
-  .box {
-    background-color: white;
-    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
-      0px 2px 4px 0px rgb(0 0 0 / 13%);
-    counter-increment: services;
-    transition: var(--main-transition);
-    position: relative;
-  }
-  
-  .box::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 3px;
-    width: 0;
-    background-color: var(--main-color);
-    transition: var(--main-transition);
-  }
-  
-  .box:hover {
-    transform: translateY(-10px);
-  }
-  
-  .box:hover::before {
-    width: 100%;
-  }
-  
-  .box i {
-    margin: 30px auto;
-    display: block;
-    text-align: center;
-    color: #dfdfdf;
-  }
-  
-  .box h3 {
-    text-align: center;
-    font-size: 25px;
-    color: var(--main-color);
-    margin: 25px 0;
-  }
-  
-  .info {
-    padding-left: 100px;
-    text-align: right;
-    position: relative;
-    background-color: #f9f9f9;
-  }
-  
-  .info::before {
-    content: "0" counter(services);
-    background-color: var(--main-color);
-    color: white;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    padding-right: 30px;
-  }
-  
-  .info::after {
-    content: "";
-    position: absolute;
-    left: 105px;
-    top: 0;
-    height: 100%;
-    width: 60px;
-    background-color: #d5d5d5;
-    transform: skewX(-20deg);
-  }
-  
-  .info a {
-    color: var(--main-color);
-  }
-  
-    /* Main title styling and animations */
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Adjust box styles for responsiveness */
+.box {
+  background-color: white;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 13%);
+  counter-increment: services;
+  transition: var(--main-transition);
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Box hover effect */
+.box:hover {
+  transform: translateY(-10px);
+}
+
+.box:hover::before {
+  width: 100%;
+}
+
+/* Icon styling */
+.box i {
+  margin: 30px auto;
+  display: block;
+  color: #dfdfdf;
+  font-size: 3rem; /* Adjusted size for mobile */
+}
+
+/* Title styling */
+.box h3 {
+  font-size: 20px; /* Adjusted font size */
+  color: var(--main-color);
+  margin: 20px 0;
+}
+
+/* Info section adjustments */
+.info {
+  padding-left: 100px;
+  text-align: right;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+/* Info section numbering */
+.info::before {
+  content: "0" counter(services);
+  background-color: var(--main-color);
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Adjusted font size */
+  padding-right: 30px;
+}
+
+/* Skewed background for info section */
+.info::after {
+  content: "";
+  position: absolute;
+  left: 105px;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #d5d5d5;
+  transform: skewX(-20deg);
+}
+
+.info a {
+  color: var(--main-color);
+}
+
+/* Main title styling and animations */
 .mainTitle {
-    position: relative;
-    text-transform: uppercase;
-    border: 2px solid black;
-    width: fit-content;
-    margin: 0 auto 80px;
-    padding: 20px;
-    z-index: 1;
-    transition: var(--main-transition);
+  position: relative;
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 0 auto 80px;
+  padding: 20px;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+
+/* Hover effect for the main title */
+.mainTitle:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.1s;
+  background-color: var(--main-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .services {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  
-  .mainTitle:hover {
-    color: white;
-    border: 2px solid white;
-    transition-delay: 0.1s;
-    background-color: var(--main-color);
+
+  /* Stack the grid items vertically */
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
+
+  /* Adjust icon size for mobile */
+  .box i {
+    font-size: 2.5rem;
+  }
+
+  /* Adjust text size */
+  .box h3 {
+    font-size: 18px;
+  }
+
+  .info {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .info::before {
+    font-size: 25px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .box i {
+    font-size: 2rem;
+  }
+
+  .box h3 {
+    font-size: 16px;
+  }
+
+  .info {
+    padding-left: 15px;
+  }
+
+  .info::before {
+    font-size: 22px;
+    width: 60px;
+  }
+}
